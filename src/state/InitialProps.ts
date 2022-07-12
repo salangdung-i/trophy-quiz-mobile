@@ -23,6 +23,8 @@ export type TResponseData = {
   results: TQuiz[];
 };
 
+// global state이지만 selector 표현되어짐
+// 1. 다른 atom을 구독함
 export default selector<TResponseData>({
   key: 'initilaOrderState',
   get: async ({ get }) => {
@@ -74,3 +76,8 @@ export default selector<TResponseData>({
     set(QuizDifficultyState, undefined);
   },
 });
+
+// start -> reset.. 가 호출
+// select -> set 함수 실행
+// global state amount, difficulty query data state update
+// 비동기 function 안에서 query data => quizNumberm

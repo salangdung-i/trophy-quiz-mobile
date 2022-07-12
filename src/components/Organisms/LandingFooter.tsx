@@ -7,6 +7,8 @@ import Atoms from 'components/Atoms';
 
 const LandingFooter = () => {
   const history = useHistory();
+
+  // resetIntialProps , useResetRecoilState 리코일에서 제공하는 hook을 통해서 받아지는 함수
   const resetIntialProps = useResetRecoilState(InitialPropsState);
 
   const handleClick = () => {

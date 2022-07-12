@@ -1,6 +1,7 @@
 import { ChangeEvent } from 'react';
 import { useRecoilState } from 'recoil';
-
+// useRecoilState 파라미터 atom을 넣어준다. 꺼내서 쓰기 위해서
+// 마치 useState 처럼 쓰임
 import {
   ANY_DIFFICULTY,
   difficulties,
@@ -21,6 +22,7 @@ const QuizDifficulty = () => {
 
   return (
     <Content header="Difficulty">
+      {/*  select 태그를 return  */}
       <Atoms.Select
         data-testid={DIFFICULTY_SELECT_TEST_ID}
         margin="16px 0px"
